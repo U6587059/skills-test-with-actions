@@ -1,6 +1,6 @@
 name: Run markdown lint
 
-on: [push]  # or specify other event triggers, like 'pull_request'
+on: [push]  # หรือใช้ trigger อื่น ๆ เช่น pull_request
 
 jobs:
   lint:
@@ -12,5 +12,5 @@ jobs:
 
     - name: Install dependencies and run markdown lint
       run: |
-        npm install remark-cli remark-preset-lint-consistent
+        npm install remark-cli remark-preset-lint-consistent --save-dev
         npx remark . --use remark-preset-lint-consistent --frail
